@@ -3,7 +3,6 @@
 
 **Autor:** Carlos Vargas  
 **Fecha:** 30 de octubre de 2025  
-**Versión:** 1.0.0
 
 ---
 
@@ -23,7 +22,6 @@ El sistema permite la gestión unificada de múltiples tipos de sensores (temper
 - **POO**: Programación Orientada a Objetos
 - **IoT**: Internet of Things (Internet de las Cosas)
 - **IC**: Infraestructura Crítica
-- **STL**: Standard Template Library
 - **CMake**: Cross-platform Make
 
 ---

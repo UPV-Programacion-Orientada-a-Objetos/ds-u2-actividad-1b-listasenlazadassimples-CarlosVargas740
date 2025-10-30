@@ -1,0 +1,224 @@
+\doxysubsection{Referencia de la clase Sensor\+Presion}
+\hypertarget{classSensorPresion}{}\label{classSensorPresion}\index{SensorPresion@{SensorPresion}}
+
+
+Sensor que mide presión atmosférica en h\+Pa (tipo int)  
+
+
+
+
+{\ttfamily \#include $<$Sensor\+Presion.\+h$>$}
+
+
+
+Diagrama de herencia de Sensor\+Presion
+% FIG 0
+
+
+Diagrama de colaboración de Sensor\+Presion\+:
+% FIG 1
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSensorPresion_a97eda9496e9663ff4b8820ca5d06ecb9}{Sensor\+Presion}} (const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}{id}}, const char \texorpdfstring{$\ast$}{*}ubi)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSensorPresion_a74f7b45a7c8bf0112b1b5fa731e7c01a}{agregar\+Lectura}} (int valor)
+\begin{DoxyCompactList}\small\item\em Agrega una lectura de presión. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSensorPresion_aff696aceb5e619529f911311a35d3c76}{procesar\+Lectura}} () override
+\begin{DoxyCompactList}\small\item\em Procesa las lecturas de presión. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSensorPresion_ad5181690dfb24946217e882606f04428}{imprimir\+Info}} () const override
+\begin{DoxyCompactList}\small\item\em Imprime información del sensor. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ int $>$ \& \mbox{\hyperlink{classSensorPresion_ab4a43c0b9d28d54cac445a614df9210e}{get\+Lecturas}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de lecturas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxyparagraph*{Métodos públicos heredados de \mbox{\hyperlink{classSensorBase}{Sensor\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSensorBase_abb141b649d4b3ab753ee9be122e60d49}{Sensor\+Base}} (const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}{id}}, const char \texorpdfstring{$\ast$}{*}ubi)
+\begin{DoxyCompactList}\small\item\em Constructor parametrizado. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSensorBase_acb58cfa69a0635dc3ef5ccb1590dc261}{\texorpdfstring{$\sim$}{\string~}\+Sensor\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor virtual (crítico para polimorfismo) \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSensorBase_afcf1ece5fa3b4ffef2c74b65c90f1a8f}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el ID del sensor. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSensorBase_a0a693d0d29152d880cc799a08bc5b535}{get\+Ubicacion}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene la ubicación del sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ int $>$ \mbox{\hyperlink{classSensorPresion_a2cd88b998df0484356175ec5076630af}{lecturas}}
+\begin{DoxyCompactList}\small\item\em Lista de lecturas de presión. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Otros miembros heredados}
+\doxyparagraph*{Atributos protegidos heredados de \mbox{\hyperlink{classSensorBase}{Sensor\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}{id}}
+\begin{DoxyCompactList}\small\item\em Identificador único del sensor. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSensorBase_a924bf2aa62fdcbe9b8df1adaaae98ed6}{ubicacion}}
+\begin{DoxyCompactList}\small\item\em Ubicación física del sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Sensor que mide presión atmosférica en h\+Pa (tipo int) 
+
+Hereda de \doxylink{classSensorBase}{Sensor\+Base} e implementa procesamiento específico para datos de presión. 
+
+Definición en la línea \mbox{\hyperlink{SensorPresion_8h_source_l00021}{21}} del archivo \mbox{\hyperlink{SensorPresion_8h_source}{Sensor\+Presion.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classSensorPresion_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{classSensorPresion_a97eda9496e9663ff4b8820ca5d06ecb9}\index{SensorPresion@{SensorPresion}!SensorPresion@{SensorPresion}}
+\index{SensorPresion@{SensorPresion}!SensorPresion@{SensorPresion}}
+\doxyparagraph{\texorpdfstring{SensorPresion()}{SensorPresion()}}
+{\footnotesize\ttfamily \label{classSensorPresion_a97eda9496e9663ff4b8820ca5d06ecb9} 
+Sensor\+Presion\+::\+Sensor\+Presion (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{id}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{ubi}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & Identificador del sensor \\
+\hline
+{\em ubi} & Ubicación del sensor \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{SensorPresion_8h_source_l00031}{31}} del archivo \mbox{\hyperlink{SensorPresion_8h_source}{Sensor\+Presion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{SensorBase_8h_source_l00023}{Sensor\+Base\+::id}} y \mbox{\hyperlink{SensorBase_8h_source_l00032}{Sensor\+Base\+::\+Sensor\+Base()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 2
+
+
+\label{doc-func-members}
+\Hypertarget{classSensorPresion_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{classSensorPresion_a74f7b45a7c8bf0112b1b5fa731e7c01a}\index{SensorPresion@{SensorPresion}!agregarLectura@{agregarLectura}}
+\index{agregarLectura@{agregarLectura}!SensorPresion@{SensorPresion}}
+\doxyparagraph{\texorpdfstring{agregarLectura()}{agregarLectura()}}
+{\footnotesize\ttfamily \label{classSensorPresion_a74f7b45a7c8bf0112b1b5fa731e7c01a} 
+void Sensor\+Presion\+::agregar\+Lectura (\begin{DoxyParamCaption}\item[{int}]{valor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega una lectura de presión. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valor} & Presión en h\+Pa \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{SensorPresion_8h_source_l00038}{38}} del archivo \mbox{\hyperlink{SensorPresion_8h_source}{Sensor\+Presion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{SensorPresion_8h_source_l00023}{lecturas}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8cpp_source_l00090}{main()}} y \mbox{\hyperlink{main_8cpp_source_l00034}{procesar\+Dato\+Arduino()}}.
+
+Gráfico de llamadas a esta función\+:
+% FIG 3
+\Hypertarget{classSensorPresion_ab4a43c0b9d28d54cac445a614df9210e}\index{SensorPresion@{SensorPresion}!getLecturas@{getLecturas}}
+\index{getLecturas@{getLecturas}!SensorPresion@{SensorPresion}}
+\doxyparagraph{\texorpdfstring{getLecturas()}{getLecturas()}}
+{\footnotesize\ttfamily \label{classSensorPresion_ab4a43c0b9d28d54cac445a614df9210e} 
+const \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ int $>$ \& Sensor\+Presion\+::get\+Lecturas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la lista de lecturas. 
+
+\begin{DoxyReturn}{Devuelve}
+Referencia a la lista 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{SensorPresion_8h_source_l00081}{81}} del archivo \mbox{\hyperlink{SensorPresion_8h_source}{Sensor\+Presion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{SensorPresion_8h_source_l00023}{lecturas}}.
+
+\Hypertarget{classSensorPresion_ad5181690dfb24946217e882606f04428}\index{SensorPresion@{SensorPresion}!imprimirInfo@{imprimirInfo}}
+\index{imprimirInfo@{imprimirInfo}!SensorPresion@{SensorPresion}}
+\doxyparagraph{\texorpdfstring{imprimirInfo()}{imprimirInfo()}}
+{\footnotesize\ttfamily \label{classSensorPresion_ad5181690dfb24946217e882606f04428} 
+void Sensor\+Presion\+::imprimir\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Imprime información del sensor. 
+
+
+
+Implementa \mbox{\hyperlink{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec}{Sensor\+Base}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SensorPresion_8h_source_l00068}{68}} del archivo \mbox{\hyperlink{SensorPresion_8h_source}{Sensor\+Presion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{SensorPresion_8h_source_l00023}{lecturas}} y \mbox{\hyperlink{SensorBase_8h_source_l00024}{Sensor\+Base\+::ubicacion}}.
+
+\Hypertarget{classSensorPresion_aff696aceb5e619529f911311a35d3c76}\index{SensorPresion@{SensorPresion}!procesarLectura@{procesarLectura}}
+\index{procesarLectura@{procesarLectura}!SensorPresion@{SensorPresion}}
+\doxyparagraph{\texorpdfstring{procesarLectura()}{procesarLectura()}}
+{\footnotesize\ttfamily \label{classSensorPresion_aff696aceb5e619529f911311a35d3c76} 
+void Sensor\+Presion\+::procesar\+Lectura (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Procesa las lecturas de presión. 
+
+Calcula promedio y verifica límites (980-\/1050 h\+Pa) 
+
+Implementa \mbox{\hyperlink{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4}{Sensor\+Base}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SensorPresion_8h_source_l00047}{47}} del archivo \mbox{\hyperlink{SensorPresion_8h_source}{Sensor\+Presion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{SensorPresion_8h_source_l00023}{lecturas}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classSensorPresion_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{classSensorPresion_a2cd88b998df0484356175ec5076630af}\index{SensorPresion@{SensorPresion}!lecturas@{lecturas}}
+\index{lecturas@{lecturas}!SensorPresion@{SensorPresion}}
+\doxyparagraph{\texorpdfstring{lecturas}{lecturas}}
+{\footnotesize\ttfamily \label{classSensorPresion_a2cd88b998df0484356175ec5076630af} 
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$int$>$ Sensor\+Presion\+::lecturas\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista de lecturas de presión. 
+
+
+
+Definición en la línea \mbox{\hyperlink{SensorPresion_8h_source_l00023}{23}} del archivo \mbox{\hyperlink{SensorPresion_8h_source}{Sensor\+Presion.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SensorPresion_8h_source_l00038}{agregar\+Lectura()}}, \mbox{\hyperlink{SensorPresion_8h_source_l00081}{get\+Lecturas()}}, \mbox{\hyperlink{SensorPresion_8h_source_l00068}{imprimir\+Info()}} y \mbox{\hyperlink{SensorPresion_8h_source_l00047}{procesar\+Lectura()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/charly/\+Documentos/\+Programacion Estructurada/sistema-\/sensores-\/iot/include/\mbox{\hyperlink{SensorPresion_8h}{Sensor\+Presion.\+h}}\end{DoxyCompactItemize}

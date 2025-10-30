@@ -1,0 +1,395 @@
+\doxysubsection{Referencia de la plantilla de la clase Lista\+Sensor\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{classListaSensor}{}\label{classListaSensor}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+
+
+Lista enlazada genérica con gestión manual de memoria.  
+
+
+
+
+{\ttfamily \#include $<$Lista\+Sensor.\+h$>$}
+
+
+
+Diagrama de herencia de Lista\+Sensor\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}
+% FIG 0
+
+
+Diagrama de colaboración de Lista\+Sensor\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+% FIG 1
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{Lista\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classListaSensor_a1f0e57e514a2624a2473795bbd8fec8d}{\texorpdfstring{$\sim$}{\string~}\+Lista\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classListaSensor_a81b2253c4b18038c2b9f823d5e244227}{Lista\+Sensor}} (const \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}} \&otra)
+\begin{DoxyCompactList}\small\item\em Constructor de copia (Regla de Tres) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}} \& \mbox{\hyperlink{classListaSensor_acd2b457d8d9fc55aeb832fd01c00f5a4}{operator=}} (const \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}} \&otra)
+\begin{DoxyCompactList}\small\item\em Operador de asignación (Regla de Tres) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaSensor_a8a27091eef3e7fad01bc9e887b212581}{agregar}} (T valor)
+\begin{DoxyCompactList}\small\item\em Agrega un elemento al final. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classListaSensor_a9cd368481187ad8a4faf79db7810086b}{calcular\+Promedio}} () const
+\begin{DoxyCompactList}\small\item\em Calcula el promedio de los valores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classListaSensor_a6635542f89115ce10f42a5531b84125b}{get\+Cantidad}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el número de elementos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaSensor_a11f84bbbda6299d28a3018eefeeb5a02}{imprimir}} () const
+\begin{DoxyCompactList}\small\item\em Imprime todos los valores. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classListaSensor_a2dd75ef08cf9a41dc12886b45aa0571e}{esta\+Vacia}} () const
+\begin{DoxyCompactList}\small\item\em Verifica si la lista está vacía. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classListaSensor_ad7832831f2089f21a189cdc7b9fea56e}{liberar}} ()
+\begin{DoxyCompactList}\small\item\em Libera toda la memoria de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaSensor_abeca79d0410015b3d935876328c269e3}{copiar}} (const \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}} \&otra)
+\begin{DoxyCompactList}\small\item\em Copia profunda de otra lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNodo}{Nodo}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}
+\begin{DoxyCompactList}\small\item\em Puntero al primer nodo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}}
+\begin{DoxyCompactList}\small\item\em Número de elementos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class Lista\+Sensor$<$ T $>$}
+Lista enlazada genérica con gestión manual de memoria. 
+
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & Tipo de dato a almacenar (int, float, etc.)\\
+\hline
+\end{DoxyTemplParams}
+Implementa la Regla de Tres (constructor copia, operador=, destructor) para gestión correcta de memoria dinámica. 
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00039}{39}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classListaSensor_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{classListaSensor_add555365175bf2140b81b9a2b5a303f5}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!ListaSensor@{ListaSensor}}
+\index{ListaSensor@{ListaSensor}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{ListaSensor()}{ListaSensor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classListaSensor_add555365175bf2140b81b9a2b5a303f5} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\mbox{\hyperlink{classListaSensor}{\+::\+Lista\+Sensor}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00086}{86}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00041}{cabeza}} y \mbox{\hyperlink{ListaSensor_8h_source_l00042}{cantidad}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaSensor_8h_source_l00062}{copiar()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00099}{Lista\+Sensor()}} y \mbox{\hyperlink{ListaSensor_8h_source_l00108}{operator=()}}.
+
+Gráfico de llamadas a esta función\+:
+% FIG 2
+\Hypertarget{classListaSensor_a1f0e57e514a2624a2473795bbd8fec8d}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!````~ListaSensor@{\texorpdfstring{$\sim$}{\string~}ListaSensor}}
+\index{````~ListaSensor@{\texorpdfstring{$\sim$}{\string~}ListaSensor}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ListaSensor()}{\string~ListaSensor()}}
+{\footnotesize\ttfamily \label{classListaSensor_a1f0e57e514a2624a2473795bbd8fec8d} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00091}{91}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00047}{liberar()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 3
+\Hypertarget{classListaSensor_a81b2253c4b18038c2b9f823d5e244227}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!ListaSensor@{ListaSensor}}
+\index{ListaSensor@{ListaSensor}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{ListaSensor()}{ListaSensor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classListaSensor_a81b2253c4b18038c2b9f823d5e244227} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\mbox{\hyperlink{classListaSensor}{\+::\+Lista\+Sensor}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$ \&}]{otra}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de copia (Regla de Tres) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em otra} & Lista a copiar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00099}{99}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00041}{cabeza}}, \mbox{\hyperlink{ListaSensor_8h_source_l00042}{cantidad}}, \mbox{\hyperlink{ListaSensor_8h_source_l00062}{copiar()}} y \mbox{\hyperlink{ListaSensor_8h_source_l00086}{Lista\+Sensor()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 4
+
+
+\label{doc-func-members}
+\Hypertarget{classListaSensor_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{classListaSensor_a8a27091eef3e7fad01bc9e887b212581}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!agregar@{agregar}}
+\index{agregar@{agregar}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{agregar()}{agregar()}}
+{\footnotesize\ttfamily \label{classListaSensor_a8a27091eef3e7fad01bc9e887b212581} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::agregar (\begin{DoxyParamCaption}\item[{T}]{valor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega un elemento al final. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valor} & Valor a agregar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00120}{120}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00041}{cabeza}}, \mbox{\hyperlink{ListaSensor_8h_source_l00042}{cantidad}} y \mbox{\hyperlink{ListaSensor_8h_source_l00021}{Nodo$<$ T $>$\+::siguiente}}.
+
+\Hypertarget{classListaSensor_a9cd368481187ad8a4faf79db7810086b}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!calcularPromedio@{calcularPromedio}}
+\index{calcularPromedio@{calcularPromedio}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{calcularPromedio()}{calcularPromedio()}}
+{\footnotesize\ttfamily \label{classListaSensor_a9cd368481187ad8a4faf79db7810086b} 
+template$<$typename T$>$ \\
+T \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::calcular\+Promedio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula el promedio de los valores. 
+
+\begin{DoxyReturn}{Devuelve}
+Promedio (tipo T) 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00140}{140}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00041}{cabeza}}, \mbox{\hyperlink{ListaSensor_8h_source_l00042}{cantidad}}, \mbox{\hyperlink{ListaSensor_8h_source_l00020}{Nodo$<$ T $>$\+::dato}} y \mbox{\hyperlink{ListaSensor_8h_source_l00021}{Nodo$<$ T $>$\+::siguiente}}.
+
+\Hypertarget{classListaSensor_abeca79d0410015b3d935876328c269e3}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!copiar@{copiar}}
+\index{copiar@{copiar}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{copiar()}{copiar()}}
+{\footnotesize\ttfamily \label{classListaSensor_abeca79d0410015b3d935876328c269e3} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::copiar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$ \&}]{otra}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Copia profunda de otra lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em otra} & Lista a copiar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00062}{62}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00041}{cabeza}}, \mbox{\hyperlink{ListaSensor_8h_source_l00042}{cantidad}}, \mbox{\hyperlink{ListaSensor_8h_source_l00020}{Nodo$<$ T $>$\+::dato}}, \mbox{\hyperlink{ListaSensor_8h_source_l00086}{Lista\+Sensor()}} y \mbox{\hyperlink{ListaSensor_8h_source_l00021}{Nodo$<$ T $>$\+::siguiente}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaSensor_8h_source_l00099}{Lista\+Sensor()}} y \mbox{\hyperlink{ListaSensor_8h_source_l00108}{operator=()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 5
+Gráfico de llamadas a esta función\+:
+% FIG 6
+\Hypertarget{classListaSensor_a2dd75ef08cf9a41dc12886b45aa0571e}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!estaVacia@{estaVacia}}
+\index{estaVacia@{estaVacia}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{estaVacia()}{estaVacia()}}
+{\footnotesize\ttfamily \label{classListaSensor_a2dd75ef08cf9a41dc12886b45aa0571e} 
+template$<$typename T$>$ \\
+bool \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::esta\+Vacia (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si la lista está vacía. 
+
+\begin{DoxyReturn}{Devuelve}
+true si está vacía 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00182}{182}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00041}{cabeza}}.
+
+\Hypertarget{classListaSensor_a6635542f89115ce10f42a5531b84125b}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!getCantidad@{getCantidad}}
+\index{getCantidad@{getCantidad}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{getCantidad()}{getCantidad()}}
+{\footnotesize\ttfamily \label{classListaSensor_a6635542f89115ce10f42a5531b84125b} 
+template$<$typename T$>$ \\
+int \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::get\+Cantidad (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el número de elementos. 
+
+\begin{DoxyReturn}{Devuelve}
+Cantidad de elementos 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00158}{158}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00042}{cantidad}}.
+
+\Hypertarget{classListaSensor_a11f84bbbda6299d28a3018eefeeb5a02}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!imprimir@{imprimir}}
+\index{imprimir@{imprimir}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{imprimir()}{imprimir()}}
+{\footnotesize\ttfamily \label{classListaSensor_a11f84bbbda6299d28a3018eefeeb5a02} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::imprimir (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Imprime todos los valores. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00165}{165}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00041}{cabeza}}, \mbox{\hyperlink{ListaSensor_8h_source_l00020}{Nodo$<$ T $>$\+::dato}} y \mbox{\hyperlink{ListaSensor_8h_source_l00021}{Nodo$<$ T $>$\+::siguiente}}.
+
+\Hypertarget{classListaSensor_ad7832831f2089f21a189cdc7b9fea56e}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!liberar@{liberar}}
+\index{liberar@{liberar}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{liberar()}{liberar()}}
+{\footnotesize\ttfamily \label{classListaSensor_ad7832831f2089f21a189cdc7b9fea56e} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::liberar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Libera toda la memoria de la lista. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00047}{47}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00041}{cabeza}}, \mbox{\hyperlink{ListaSensor_8h_source_l00042}{cantidad}} y \mbox{\hyperlink{ListaSensor_8h_source_l00021}{Nodo$<$ T $>$\+::siguiente}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaSensor_8h_source_l00108}{operator=()}} y \mbox{\hyperlink{ListaSensor_8h_source_l00091}{\texorpdfstring{$\sim$}{\string~}\+Lista\+Sensor()}}.
+
+Gráfico de llamadas a esta función\+:
+% FIG 7
+\Hypertarget{classListaSensor_acd2b457d8d9fc55aeb832fd01c00f5a4}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classListaSensor_acd2b457d8d9fc55aeb832fd01c00f5a4} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classListaSensor}{Lista\+Sensor}} \& \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$ \&}]{otra}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de asignación (Regla de Tres) 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em otra} & Lista a asignar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Referencia a esta lista 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00108}{108}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaSensor_8h_source_l00062}{copiar()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00047}{liberar()}} y \mbox{\hyperlink{ListaSensor_8h_source_l00086}{Lista\+Sensor()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 8
+
+
+\label{doc-variable-members}
+\Hypertarget{classListaSensor_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!cabeza@{cabeza}}
+\index{cabeza@{cabeza}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{cabeza}{cabeza}}
+{\footnotesize\ttfamily \label{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{structNodo}{Nodo}}$<$T$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::cabeza\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Puntero al primer nodo. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00041}{41}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaSensor_8h_source_l00120}{agregar()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00140}{calcular\+Promedio()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00062}{copiar()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00182}{esta\+Vacia()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00165}{imprimir()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00047}{liberar()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00086}{Lista\+Sensor()}} y \mbox{\hyperlink{ListaSensor_8h_source_l00099}{Lista\+Sensor()}}.
+
+\Hypertarget{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}\index{ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}!cantidad@{cantidad}}
+\index{cantidad@{cantidad}!ListaSensor$<$ T $>$@{ListaSensor$<$ T $>$}}
+\doxyparagraph{\texorpdfstring{cantidad}{cantidad}}
+{\footnotesize\ttfamily \label{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e} 
+template$<$typename T$>$ \\
+int \mbox{\hyperlink{classListaSensor}{Lista\+Sensor}}$<$ T $>$\+::cantidad\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número de elementos. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaSensor_8h_source_l00042}{42}} del archivo \mbox{\hyperlink{ListaSensor_8h_source}{Lista\+Sensor.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaSensor_8h_source_l00120}{agregar()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00140}{calcular\+Promedio()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00062}{copiar()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00158}{get\+Cantidad()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00047}{liberar()}}, \mbox{\hyperlink{ListaSensor_8h_source_l00086}{Lista\+Sensor()}} y \mbox{\hyperlink{ListaSensor_8h_source_l00099}{Lista\+Sensor()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/charly/\+Documentos/\+Programacion Estructurada/sistema-\/sensores-\/iot/include/\mbox{\hyperlink{ListaSensor_8h}{Lista\+Sensor.\+h}}\end{DoxyCompactItemize}

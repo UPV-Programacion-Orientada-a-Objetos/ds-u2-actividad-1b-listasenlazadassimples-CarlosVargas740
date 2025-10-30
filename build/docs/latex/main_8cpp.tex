@@ -1,0 +1,102 @@
+\doxysubsection{Referencia del archivo /home/charly/\+Documentos/\+Programacion Estructurada/sistema-\/sensores-\/iot/src/main.cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{/home/charly/Documentos/Programacion Estructurada/sistema-\/sensores-\/iot/src/main.cpp@{/home/charly/Documentos/Programacion Estructurada/sistema-\/sensores-\/iot/src/main.cpp}}
+
+
+Programa principal SIMPLIFICADO del Sistema IoT.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include "{}../include/\+Lista\+Sensor.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Sensor\+Base.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Sensor\+Temperatura.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Sensor\+Presion.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Sensor\+Vibracion.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Lista\+Gestion.\+h"{}}\newline
+{\ttfamily \#include "{}../include/\+Simulador\+Serial.\+h"{}}\newline
+Gráfico de dependencias incluidas en main.\+cpp\+:
+% FIG 0
+\doxysubsubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e}{mostrar\+Menu}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_a3b8d3a001b336e444a2b01a17fc75e64}{procesar\+Dato\+Arduino}} (char \texorpdfstring{$\ast$}{*}buffer, \mbox{\hyperlink{classListaGestion}{Lista\+Gestion}} \&lista\+Gestion)
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Programa principal SIMPLIFICADO del Sistema IoT. 
+
+\begin{DoxyAuthor}{Autor}
+Carlos Vargas 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+30 de octubre de 2025 
+\end{DoxyDate}
+
+
+Definición en el archivo \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsubsection{Documentación de funciones}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxyparagraph{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{main_8cpp_source_l00090}{90}} del archivo \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{SensorPresion_8h_source_l00038}{Sensor\+Presion\+::agregar\+Lectura()}}, \mbox{\hyperlink{SensorTemperatura_8h_source_l00038}{Sensor\+Temperatura\+::agregar\+Lectura()}}, \mbox{\hyperlink{SensorVibracion_8h_source_l00038}{Sensor\+Vibracion\+::agregar\+Lectura()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00073}{Lista\+Gestion\+::agregar\+Sensor()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00094}{Lista\+Gestion\+::buscar\+Por\+Id()}}, \mbox{\hyperlink{SimuladorSerial_8h_source_l00078}{Simulador\+Serial\+::generar\+Lectura\+Aleatoria()}}, \mbox{\hyperlink{SimuladorSerial_8h_source_l00036}{Simulador\+Serial\+::inicializar()}}, \mbox{\hyperlink{main_8cpp_source_l00021}{mostrar\+Menu()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00130}{Lista\+Gestion\+::mostrar\+Todos()}}, \mbox{\hyperlink{main_8cpp_source_l00034}{procesar\+Dato\+Arduino()}} y \mbox{\hyperlink{ListaGestion_8h_source_l00111}{Lista\+Gestion\+::procesar\+Todos\+Sensores()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 1
+\Hypertarget{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e}\index{main.cpp@{main.cpp}!mostrarMenu@{mostrarMenu}}
+\index{mostrarMenu@{mostrarMenu}!main.cpp@{main.cpp}}
+\doxyparagraph{\texorpdfstring{mostrarMenu()}{mostrarMenu()}}
+{\footnotesize\ttfamily \label{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e} 
+void mostrar\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{main_8cpp_source_l00021}{21}} del archivo \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8cpp_source_l00090}{main()}}.
+
+Gráfico de llamadas a esta función\+:
+% FIG 2
+\Hypertarget{main_8cpp_a3b8d3a001b336e444a2b01a17fc75e64}\index{main.cpp@{main.cpp}!procesarDatoArduino@{procesarDatoArduino}}
+\index{procesarDatoArduino@{procesarDatoArduino}!main.cpp@{main.cpp}}
+\doxyparagraph{\texorpdfstring{procesarDatoArduino()}{procesarDatoArduino()}}
+{\footnotesize\ttfamily \label{main_8cpp_a3b8d3a001b336e444a2b01a17fc75e64} 
+void procesar\+Dato\+Arduino (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{\mbox{\hyperlink{classListaGestion}{Lista\+Gestion}} \&}]{lista\+Gestion}{}\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{main_8cpp_source_l00034}{34}} del archivo \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{SensorPresion_8h_source_l00038}{Sensor\+Presion\+::agregar\+Lectura()}}, \mbox{\hyperlink{SensorTemperatura_8h_source_l00038}{Sensor\+Temperatura\+::agregar\+Lectura()}}, \mbox{\hyperlink{SensorVibracion_8h_source_l00038}{Sensor\+Vibracion\+::agregar\+Lectura()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00073}{Lista\+Gestion\+::agregar\+Sensor()}} y \mbox{\hyperlink{ListaGestion_8h_source_l00094}{Lista\+Gestion\+::buscar\+Por\+Id()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8cpp_source_l00090}{main()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 3
+Gráfico de llamadas a esta función\+:
+% FIG 4

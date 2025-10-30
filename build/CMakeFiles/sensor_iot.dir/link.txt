@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -pedantic -Wl,--dependency-file=CMakeFiles/sensor_iot.dir/link.d CMakeFiles/sensor_iot.dir/src/main.cpp.o -o bin/sistema_sensores_iot

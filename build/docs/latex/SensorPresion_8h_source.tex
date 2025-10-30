@@ -1,0 +1,92 @@
+\doxysubsection{Sensor\+Presion.\+h}
+\hypertarget{SensorPresion_8h_source}{}\label{SensorPresion_8h_source}\index{/home/charly/Documentos/Programacion Estructurada/sistema-\/sensores-\/iot/include/SensorPresion.h@{/home/charly/Documentos/Programacion Estructurada/sistema-\/sensores-\/iot/include/SensorPresion.h}}
+\mbox{\hyperlink{SensorPresion_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ SensorPresion.h}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00003}00003\ \textcolor{comment}{\ *\ @brief\ Sensor\ de\ presión\ atmosférica\ (valores\ enteros)}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @author\ Carlos\ Vargas}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00005}00005\ \textcolor{comment}{\ *\ @date\ 30\ de\ octubre\ de\ 2025}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ SENSOR\_PRESION\_H}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ SENSOR\_PRESION\_H}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{SensorBase_8h}{SensorBase.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ListaSensor_8h}{ListaSensor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00013}00013\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00014}00014\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00015}00015\ \textcolor{comment}{\ *\ @class\ SensorPresion}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00016}00016\ \textcolor{comment}{\ *\ @brief\ Sensor\ que\ mide\ presión\ atmosférica\ en\ hPa\ (tipo\ int)}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00017}00017\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00018}00018\ \textcolor{comment}{\ *\ Hereda\ de\ SensorBase\ e\ implementa\ procesamiento\ específico}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00019}00019\ \textcolor{comment}{\ *\ para\ datos\ de\ presión.}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00020}00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00021}\mbox{\hyperlink{classSensorPresion}{00021}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSensorPresion_a97eda9496e9663ff4b8820ca5d06ecb9}{SensorPresion}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSensorBase_abb141b649d4b3ab753ee9be122e60d49}{SensorBase}}\ \{}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00022}00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00023}\mbox{\hyperlink{classSensorPresion_a2cd88b998df0484356175ec5076630af}{00023}}\ \ \ \ \ \mbox{\hyperlink{classListaSensor}{ListaSensor<int>}}\ \mbox{\hyperlink{classSensorPresion_a2cd88b998df0484356175ec5076630af}{lecturas}};\ \ \textcolor{comment}{///<\ Lista\ de\ lecturas\ de\ presión}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00024}00024\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00025}00025\ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00026}00026\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00027}00027\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Constructor}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00028}00028\ \textcolor{comment}{\ \ \ \ \ *\ @param\ id\ Identificador\ del\ sensor}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00029}00029\ \textcolor{comment}{\ \ \ \ \ *\ @param\ ubi\ Ubicación\ del\ sensor}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00030}00030\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00031}\mbox{\hyperlink{classSensorPresion_a97eda9496e9663ff4b8820ca5d06ecb9}{00031}}\ \ \ \ \ \mbox{\hyperlink{classSensorPresion_a97eda9496e9663ff4b8820ca5d06ecb9}{SensorPresion}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ ubi)\ }
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classSensorBase_abb141b649d4b3ab753ee9be122e60d49}{SensorBase}}(\mbox{\hyperlink{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}{id}},\ ubi)\ \{\}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00033}00033\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00034}00034\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00035}00035\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Agrega\ una\ lectura\ de\ presión}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00036}00036\ \textcolor{comment}{\ \ \ \ \ *\ @param\ valor\ Presión\ en\ hPa}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00037}00037\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00038}\mbox{\hyperlink{classSensorPresion_a74f7b45a7c8bf0112b1b5fa731e7c01a}{00038}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorPresion_a74f7b45a7c8bf0112b1b5fa731e7c01a}{agregarLectura}}(\textcolor{keywordtype}{int}\ valor)\ \{}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSensorPresion_a2cd88b998df0484356175ec5076630af}{lecturas}}.agregar(valor);}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00041}00041\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00042}00042\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00043}00043\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Procesa\ las\ lecturas\ de\ presión}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ *\ }}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ *\ Calcula\ promedio\ y\ verifica\ límites\ (980-\/1050\ hPa)}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00046}00046\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00047}\mbox{\hyperlink{classSensorPresion_aff696aceb5e619529f911311a35d3c76}{00047}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorPresion_aff696aceb5e619529f911311a35d3c76}{procesarLectura}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classSensorPresion_a2cd88b998df0484356175ec5076630af}{lecturas}}.getCantidad()\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ No\ hay\ lecturas"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ promedio\ =\ \mbox{\hyperlink{classSensorPresion_a2cd88b998df0484356175ec5076630af}{lecturas}}.calcularPromedio();}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00054}00054\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Promedio:\ "{}}\ <<\ promedio\ <<\ \textcolor{stringliteral}{"{}\ hPa"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (promedio\ <\ 980)\ \{}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ ALERTA:\ Presion\ baja\ (tormenta)"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00058}00058\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (promedio\ >\ 1050)\ \{}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ ALERTA:\ Presion\ alta"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Estado:\ Normal"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00064}00064\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00065}00065\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Imprime\ información\ del\ sensor}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00068}\mbox{\hyperlink{classSensorPresion_ad5181690dfb24946217e882606f04428}{00068}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorPresion_ad5181690dfb24946217e882606f04428}{imprimirInfo}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n[PRESION]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00070}00070\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ ID:\ "{}}\ <<\ \textcolor{keywordtype}{id}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00071}00071\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Ubicacion:\ "{}}\ <<\ \mbox{\hyperlink{classSensorBase_a924bf2aa62fdcbe9b8df1adaaae98ed6}{ubicacion}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Lecturas\ ("{}}\ <<\ \mbox{\hyperlink{classSensorPresion_a2cd88b998df0484356175ec5076630af}{lecturas}}.getCantidad()\ <<\ \textcolor{stringliteral}{"{}):\ "{}};}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSensorPresion_a2cd88b998df0484356175ec5076630af}{lecturas}}.imprimir();}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00076}00076\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00077}00077\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00078}00078\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Obtiene\ la\ lista\ de\ lecturas}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00079}00079\ \textcolor{comment}{\ \ \ \ \ *\ @return\ Referencia\ a\ la\ lista}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00080}00080\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00081}\mbox{\hyperlink{classSensorPresion_ab4a43c0b9d28d54cac445a614df9210e}{00081}}\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classListaSensor}{ListaSensor<int>}}\&\ \mbox{\hyperlink{classSensorPresion_ab4a43c0b9d28d54cac445a614df9210e}{getLecturas}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classSensorPresion_a2cd88b998df0484356175ec5076630af}{lecturas}};}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00084}00084\ \};}
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{SensorPresion_8h_source_l00086}00086\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

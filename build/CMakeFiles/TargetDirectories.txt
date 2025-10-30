@@ -1,0 +1,10 @@
+/home/charly/Documentos/Programacion Estructurada/sistema-sensores-iot/build/CMakeFiles/sensor_iot.dir
+/home/charly/Documentos/Programacion Estructurada/sistema-sensores-iot/build/CMakeFiles/doc.dir
+/home/charly/Documentos/Programacion Estructurada/sistema-sensores-iot/build/CMakeFiles/package.dir
+/home/charly/Documentos/Programacion Estructurada/sistema-sensores-iot/build/CMakeFiles/package_source.dir
+/home/charly/Documentos/Programacion Estructurada/sistema-sensores-iot/build/CMakeFiles/edit_cache.dir
+/home/charly/Documentos/Programacion Estructurada/sistema-sensores-iot/build/CMakeFiles/rebuild_cache.dir
+/home/charly/Documentos/Programacion Estructurada/sistema-sensores-iot/build/CMakeFiles/list_install_components.dir
+/home/charly/Documentos/Programacion Estructurada/sistema-sensores-iot/build/CMakeFiles/install.dir
+/home/charly/Documentos/Programacion Estructurada/sistema-sensores-iot/build/CMakeFiles/install/local.dir
+/home/charly/Documentos/Programacion Estructurada/sistema-sensores-iot/build/CMakeFiles/install/strip.dir

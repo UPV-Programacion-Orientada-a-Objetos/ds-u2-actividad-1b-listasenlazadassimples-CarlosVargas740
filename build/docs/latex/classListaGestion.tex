@@ -1,0 +1,307 @@
+\doxysubsection{Referencia de la clase Lista\+Gestion}
+\hypertarget{classListaGestion}{}\label{classListaGestion}\index{ListaGestion@{ListaGestion}}
+
+
+Lista enlazada de sensores con gestión polimórfica.  
+
+
+
+
+{\ttfamily \#include $<$Lista\+Gestion.\+h$>$}
+
+
+
+Diagrama de colaboración de Lista\+Gestion\+:
+% FIG 0
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListaGestion_aceaec0bbb46bd0711387802d44e2dbee}{Lista\+Gestion}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classListaGestion_a4b123bfc1cb872963fc3aac4ee797c1f}{\texorpdfstring{$\sim$}{\string~}\+Lista\+Gestion}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaGestion_a93c07afe09ff55b0d8ba7102b079b6d2}{agregar\+Sensor}} (\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*}sensor)
+\begin{DoxyCompactList}\small\item\em Agrega un sensor a la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classListaGestion_aeca95b9079e888ba6318b5d6daea5fad}{buscar\+Por\+Id}} (const char \texorpdfstring{$\ast$}{*}id)
+\begin{DoxyCompactList}\small\item\em Busca un sensor por ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaGestion_a621eaf1eed7eafac37694989281ec087}{procesar\+Todos\+Sensores}} ()
+\begin{DoxyCompactList}\small\item\em Procesa todos los sensores (polimórfico) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaGestion_a7b6fb7000cf8dc2763c5d85f38370d1b}{mostrar\+Todos}} () const
+\begin{DoxyCompactList}\small\item\em Muestra información de todos los sensores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classListaGestion_ae014f29c92234c7419050a7bb0a576f9}{get\+Cantidad}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene la cantidad de sensores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classListaGestion_ab0e39ff320040fa9e7d460d6c94307c4}{liberar}} ()
+\begin{DoxyCompactList}\small\item\em Libera memoria de todos los sensores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNodoSensor}{Nodo\+Sensor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classListaGestion_a27d30c21791be7b3e3b35d97dc708a96}{cabeza}}
+\begin{DoxyCompactList}\small\item\em Primer nodo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classListaGestion_a4a55df7059409337149eb2ad3ff09112}{cantidad}}
+\begin{DoxyCompactList}\small\item\em Número de sensores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Lista enlazada de sensores con gestión polimórfica. 
+
+Almacena punteros a \doxylink{classSensorBase}{Sensor\+Base}, permitiendo procesamiento uniforme de diferentes tipos de sensores. 
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00036}{36}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classListaGestion_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{classListaGestion_aceaec0bbb46bd0711387802d44e2dbee}\index{ListaGestion@{ListaGestion}!ListaGestion@{ListaGestion}}
+\index{ListaGestion@{ListaGestion}!ListaGestion@{ListaGestion}}
+\doxyparagraph{\texorpdfstring{ListaGestion()}{ListaGestion()}}
+{\footnotesize\ttfamily \label{classListaGestion_aceaec0bbb46bd0711387802d44e2dbee} 
+Lista\+Gestion\+::\+Lista\+Gestion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00060}{60}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaGestion_8h_source_l00038}{cabeza}} y \mbox{\hyperlink{ListaGestion_8h_source_l00039}{cantidad}}.
+
+\Hypertarget{classListaGestion_a4b123bfc1cb872963fc3aac4ee797c1f}\index{ListaGestion@{ListaGestion}!````~ListaGestion@{\texorpdfstring{$\sim$}{\string~}ListaGestion}}
+\index{````~ListaGestion@{\texorpdfstring{$\sim$}{\string~}ListaGestion}!ListaGestion@{ListaGestion}}
+\doxyparagraph{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ListaGestion()}{\string~ListaGestion()}}
+{\footnotesize\ttfamily \label{classListaGestion_a4b123bfc1cb872963fc3aac4ee797c1f} 
+Lista\+Gestion\+::\texorpdfstring{$\sim$}{\string~}\+Lista\+Gestion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00065}{65}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaGestion_8h_source_l00044}{liberar()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 1
+
+
+\label{doc-func-members}
+\Hypertarget{classListaGestion_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{classListaGestion_a93c07afe09ff55b0d8ba7102b079b6d2}\index{ListaGestion@{ListaGestion}!agregarSensor@{agregarSensor}}
+\index{agregarSensor@{agregarSensor}!ListaGestion@{ListaGestion}}
+\doxyparagraph{\texorpdfstring{agregarSensor()}{agregarSensor()}}
+{\footnotesize\ttfamily \label{classListaGestion_a93c07afe09ff55b0d8ba7102b079b6d2} 
+void Lista\+Gestion\+::agregar\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*}}]{sensor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega un sensor a la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sensor} & Puntero al sensor (será propiedad de la lista) \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00073}{73}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaGestion_8h_source_l00038}{cabeza}}, \mbox{\hyperlink{ListaGestion_8h_source_l00039}{cantidad}} y \mbox{\hyperlink{ListaGestion_8h_source_l00020}{Nodo\+Sensor\+::siguiente}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8cpp_source_l00090}{main()}} y \mbox{\hyperlink{main_8cpp_source_l00034}{procesar\+Dato\+Arduino()}}.
+
+Gráfico de llamadas a esta función\+:
+% FIG 2
+\Hypertarget{classListaGestion_aeca95b9079e888ba6318b5d6daea5fad}\index{ListaGestion@{ListaGestion}!buscarPorId@{buscarPorId}}
+\index{buscarPorId@{buscarPorId}!ListaGestion@{ListaGestion}}
+\doxyparagraph{\texorpdfstring{buscarPorId()}{buscarPorId()}}
+{\footnotesize\ttfamily \label{classListaGestion_aeca95b9079e888ba6318b5d6daea5fad} 
+\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*} Lista\+Gestion\+::buscar\+Por\+Id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Busca un sensor por ID. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & Identificador a buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Puntero al sensor o nullptr si no existe 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00094}{94}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaGestion_8h_source_l00038}{cabeza}}, \mbox{\hyperlink{SensorBase_8h_source_l00062}{Sensor\+Base\+::get\+Id()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00019}{Nodo\+Sensor\+::sensor}} y \mbox{\hyperlink{ListaGestion_8h_source_l00020}{Nodo\+Sensor\+::siguiente}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8cpp_source_l00090}{main()}} y \mbox{\hyperlink{main_8cpp_source_l00034}{procesar\+Dato\+Arduino()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 3
+Gráfico de llamadas a esta función\+:
+% FIG 4
+\Hypertarget{classListaGestion_ae014f29c92234c7419050a7bb0a576f9}\index{ListaGestion@{ListaGestion}!getCantidad@{getCantidad}}
+\index{getCantidad@{getCantidad}!ListaGestion@{ListaGestion}}
+\doxyparagraph{\texorpdfstring{getCantidad()}{getCantidad()}}
+{\footnotesize\ttfamily \label{classListaGestion_ae014f29c92234c7419050a7bb0a576f9} 
+int Lista\+Gestion\+::get\+Cantidad (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la cantidad de sensores. 
+
+\begin{DoxyReturn}{Devuelve}
+Número de sensores 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00149}{149}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaGestion_8h_source_l00039}{cantidad}}.
+
+\Hypertarget{classListaGestion_ab0e39ff320040fa9e7d460d6c94307c4}\index{ListaGestion@{ListaGestion}!liberar@{liberar}}
+\index{liberar@{liberar}!ListaGestion@{ListaGestion}}
+\doxyparagraph{\texorpdfstring{liberar()}{liberar()}}
+{\footnotesize\ttfamily \label{classListaGestion_ab0e39ff320040fa9e7d460d6c94307c4} 
+void Lista\+Gestion\+::liberar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Libera memoria de todos los sensores. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00044}{44}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaGestion_8h_source_l00038}{cabeza}}, \mbox{\hyperlink{ListaGestion_8h_source_l00039}{cantidad}}, \mbox{\hyperlink{ListaGestion_8h_source_l00019}{Nodo\+Sensor\+::sensor}} y \mbox{\hyperlink{ListaGestion_8h_source_l00020}{Nodo\+Sensor\+::siguiente}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaGestion_8h_source_l00065}{\texorpdfstring{$\sim$}{\string~}\+Lista\+Gestion()}}.
+
+Gráfico de llamadas a esta función\+:
+% FIG 5
+\Hypertarget{classListaGestion_a7b6fb7000cf8dc2763c5d85f38370d1b}\index{ListaGestion@{ListaGestion}!mostrarTodos@{mostrarTodos}}
+\index{mostrarTodos@{mostrarTodos}!ListaGestion@{ListaGestion}}
+\doxyparagraph{\texorpdfstring{mostrarTodos()}{mostrarTodos()}}
+{\footnotesize\ttfamily \label{classListaGestion_a7b6fb7000cf8dc2763c5d85f38370d1b} 
+void Lista\+Gestion\+::mostrar\+Todos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Muestra información de todos los sensores. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00130}{130}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaGestion_8h_source_l00038}{cabeza}}, \mbox{\hyperlink{ListaGestion_8h_source_l00039}{cantidad}}, \mbox{\hyperlink{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec}{Sensor\+Base\+::imprimir\+Info()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00019}{Nodo\+Sensor\+::sensor}} y \mbox{\hyperlink{ListaGestion_8h_source_l00020}{Nodo\+Sensor\+::siguiente}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8cpp_source_l00090}{main()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 6
+Gráfico de llamadas a esta función\+:
+% FIG 7
+\Hypertarget{classListaGestion_a621eaf1eed7eafac37694989281ec087}\index{ListaGestion@{ListaGestion}!procesarTodosSensores@{procesarTodosSensores}}
+\index{procesarTodosSensores@{procesarTodosSensores}!ListaGestion@{ListaGestion}}
+\doxyparagraph{\texorpdfstring{procesarTodosSensores()}{procesarTodosSensores()}}
+{\footnotesize\ttfamily \label{classListaGestion_a621eaf1eed7eafac37694989281ec087} 
+void Lista\+Gestion\+::procesar\+Todos\+Sensores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Procesa todos los sensores (polimórfico) 
+
+Llama a procesar\+Lectura() de cada sensor mediante despachado dinámico (virtual). 
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00111}{111}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaGestion_8h_source_l00038}{cabeza}}, \mbox{\hyperlink{ListaGestion_8h_source_l00039}{cantidad}}, \mbox{\hyperlink{SensorBase_8h_source_l00062}{Sensor\+Base\+::get\+Id()}}, \mbox{\hyperlink{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4}{Sensor\+Base\+::procesar\+Lectura()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00019}{Nodo\+Sensor\+::sensor}} y \mbox{\hyperlink{ListaGestion_8h_source_l00020}{Nodo\+Sensor\+::siguiente}}.
+
+
+
+Referenciado por \mbox{\hyperlink{main_8cpp_source_l00090}{main()}}.
+
+Gráfico de llamadas de esta función\+:
+% FIG 8
+Gráfico de llamadas a esta función\+:
+% FIG 9
+
+
+\label{doc-variable-members}
+\Hypertarget{classListaGestion_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{classListaGestion_a27d30c21791be7b3e3b35d97dc708a96}\index{ListaGestion@{ListaGestion}!cabeza@{cabeza}}
+\index{cabeza@{cabeza}!ListaGestion@{ListaGestion}}
+\doxyparagraph{\texorpdfstring{cabeza}{cabeza}}
+{\footnotesize\ttfamily \label{classListaGestion_a27d30c21791be7b3e3b35d97dc708a96} 
+\mbox{\hyperlink{structNodoSensor}{Nodo\+Sensor}}\texorpdfstring{$\ast$}{*} Lista\+Gestion\+::cabeza\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Primer nodo. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00038}{38}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaGestion_8h_source_l00073}{agregar\+Sensor()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00094}{buscar\+Por\+Id()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00044}{liberar()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00060}{Lista\+Gestion()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00130}{mostrar\+Todos()}} y \mbox{\hyperlink{ListaGestion_8h_source_l00111}{procesar\+Todos\+Sensores()}}.
+
+\Hypertarget{classListaGestion_a4a55df7059409337149eb2ad3ff09112}\index{ListaGestion@{ListaGestion}!cantidad@{cantidad}}
+\index{cantidad@{cantidad}!ListaGestion@{ListaGestion}}
+\doxyparagraph{\texorpdfstring{cantidad}{cantidad}}
+{\footnotesize\ttfamily \label{classListaGestion_a4a55df7059409337149eb2ad3ff09112} 
+int Lista\+Gestion\+::cantidad\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número de sensores. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00039}{39}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaGestion_8h_source_l00073}{agregar\+Sensor()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00149}{get\+Cantidad()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00044}{liberar()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00060}{Lista\+Gestion()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00130}{mostrar\+Todos()}} y \mbox{\hyperlink{ListaGestion_8h_source_l00111}{procesar\+Todos\+Sensores()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/charly/\+Documentos/\+Programacion Estructurada/sistema-\/sensores-\/iot/include/\mbox{\hyperlink{ListaGestion_8h}{Lista\+Gestion.\+h}}\end{DoxyCompactItemize}

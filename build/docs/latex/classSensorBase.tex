@@ -1,0 +1,239 @@
+\doxysubsection{Referencia de la clase Sensor\+Base}
+\hypertarget{classSensorBase}{}\label{classSensorBase}\index{SensorBase@{SensorBase}}
+
+
+Clase abstracta que define la interfaz para todos los sensores.  
+
+
+
+
+{\ttfamily \#include $<$Sensor\+Base.\+h$>$}
+
+
+
+Diagrama de herencia de Sensor\+Base
+% FIG 0
+
+
+Diagrama de colaboración de Sensor\+Base\+:
+% FIG 1
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSensorBase_abb141b649d4b3ab753ee9be122e60d49}{Sensor\+Base}} (const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}{id}}, const char \texorpdfstring{$\ast$}{*}ubi)
+\begin{DoxyCompactList}\small\item\em Constructor parametrizado. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSensorBase_acb58cfa69a0635dc3ef5ccb1590dc261}{\texorpdfstring{$\sim$}{\string~}\+Sensor\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor virtual (crítico para polimorfismo) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4}{procesar\+Lectura}} ()=0
+\begin{DoxyCompactList}\small\item\em Procesa una lectura del sensor (método virtual puro) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec}{imprimir\+Info}} () const =0
+\begin{DoxyCompactList}\small\item\em Imprime información del sensor (método virtual puro) \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSensorBase_afcf1ece5fa3b4ffef2c74b65c90f1a8f}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el ID del sensor. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSensorBase_a0a693d0d29152d880cc799a08bc5b535}{get\+Ubicacion}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene la ubicación del sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}{id}}
+\begin{DoxyCompactList}\small\item\em Identificador único del sensor. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSensorBase_a924bf2aa62fdcbe9b8df1adaaae98ed6}{ubicacion}}
+\begin{DoxyCompactList}\small\item\em Ubicación física del sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+Clase abstracta que define la interfaz para todos los sensores. 
+
+Esta clase utiliza polimorfismo para permitir procesamiento uniforme de diferentes tipos de sensores a través de métodos virtuales puros. 
+
+Definición en la línea \mbox{\hyperlink{SensorBase_8h_source_l00021}{21}} del archivo \mbox{\hyperlink{SensorBase_8h_source}{Sensor\+Base.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classSensorBase_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{classSensorBase_abb141b649d4b3ab753ee9be122e60d49}\index{SensorBase@{SensorBase}!SensorBase@{SensorBase}}
+\index{SensorBase@{SensorBase}!SensorBase@{SensorBase}}
+\doxyparagraph{\texorpdfstring{SensorBase()}{SensorBase()}}
+{\footnotesize\ttfamily \label{classSensorBase_abb141b649d4b3ab753ee9be122e60d49} 
+Sensor\+Base\+::\+Sensor\+Base (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{id}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{ubi}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor parametrizado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & Identificador del sensor \\
+\hline
+{\em ubi} & Ubicación del sensor \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{SensorBase_8h_source_l00032}{32}} del archivo \mbox{\hyperlink{SensorBase_8h_source}{Sensor\+Base.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SensorPresion_8h_source_l00031}{Sensor\+Presion\+::\+Sensor\+Presion()}}, \mbox{\hyperlink{SensorTemperatura_8h_source_l00031}{Sensor\+Temperatura\+::\+Sensor\+Temperatura()}} y \mbox{\hyperlink{SensorVibracion_8h_source_l00031}{Sensor\+Vibracion\+::\+Sensor\+Vibracion()}}.
+
+Gráfico de llamadas a esta función\+:
+% FIG 2
+\Hypertarget{classSensorBase_acb58cfa69a0635dc3ef5ccb1590dc261}\index{SensorBase@{SensorBase}!````~SensorBase@{\texorpdfstring{$\sim$}{\string~}SensorBase}}
+\index{````~SensorBase@{\texorpdfstring{$\sim$}{\string~}SensorBase}!SensorBase@{SensorBase}}
+\doxyparagraph{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SensorBase()}{\string~SensorBase()}}
+{\footnotesize\ttfamily \label{classSensorBase_acb58cfa69a0635dc3ef5ccb1590dc261} 
+virtual Sensor\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Sensor\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor virtual (crítico para polimorfismo) 
+
+
+
+Definición en la línea \mbox{\hyperlink{SensorBase_8h_source_l00043}{43}} del archivo \mbox{\hyperlink{SensorBase_8h_source}{Sensor\+Base.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{SensorBase_8h_source_l00023}{id}} y \mbox{\hyperlink{SensorBase_8h_source_l00024}{ubicacion}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classSensorBase_doc-func-members}
+\doxysubsubsection{Documentación de funciones miembro}
+\Hypertarget{classSensorBase_afcf1ece5fa3b4ffef2c74b65c90f1a8f}\index{SensorBase@{SensorBase}!getId@{getId}}
+\index{getId@{getId}!SensorBase@{SensorBase}}
+\doxyparagraph{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classSensorBase_afcf1ece5fa3b4ffef2c74b65c90f1a8f} 
+const char \texorpdfstring{$\ast$}{*} Sensor\+Base\+::get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el ID del sensor. 
+
+\begin{DoxyReturn}{Devuelve}
+Puntero al identificador 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{SensorBase_8h_source_l00062}{62}} del archivo \mbox{\hyperlink{SensorBase_8h_source}{Sensor\+Base.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{SensorBase_8h_source_l00023}{id}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaGestion_8h_source_l00094}{Lista\+Gestion\+::buscar\+Por\+Id()}} y \mbox{\hyperlink{ListaGestion_8h_source_l00111}{Lista\+Gestion\+::procesar\+Todos\+Sensores()}}.
+
+Gráfico de llamadas a esta función\+:
+% FIG 3
+\Hypertarget{classSensorBase_a0a693d0d29152d880cc799a08bc5b535}\index{SensorBase@{SensorBase}!getUbicacion@{getUbicacion}}
+\index{getUbicacion@{getUbicacion}!SensorBase@{SensorBase}}
+\doxyparagraph{\texorpdfstring{getUbicacion()}{getUbicacion()}}
+{\footnotesize\ttfamily \label{classSensorBase_a0a693d0d29152d880cc799a08bc5b535} 
+const char \texorpdfstring{$\ast$}{*} Sensor\+Base\+::get\+Ubicacion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la ubicación del sensor. 
+
+\begin{DoxyReturn}{Devuelve}
+Puntero a la ubicación 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{SensorBase_8h_source_l00068}{68}} del archivo \mbox{\hyperlink{SensorBase_8h_source}{Sensor\+Base.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{SensorBase_8h_source_l00024}{ubicacion}}.
+
+\Hypertarget{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec}\index{SensorBase@{SensorBase}!imprimirInfo@{imprimirInfo}}
+\index{imprimirInfo@{imprimirInfo}!SensorBase@{SensorBase}}
+\doxyparagraph{\texorpdfstring{imprimirInfo()}{imprimirInfo()}}
+{\footnotesize\ttfamily \label{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec} 
+virtual void Sensor\+Base\+::imprimir\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Imprime información del sensor (método virtual puro) 
+
+
+
+Implementado en \mbox{\hyperlink{classSensorPresion_ad5181690dfb24946217e882606f04428}{Sensor\+Presion}}, \mbox{\hyperlink{classSensorTemperatura_a95a263967c5f9a55da09be3b11c27c86}{Sensor\+Temperatura}} y \mbox{\hyperlink{classSensorVibracion_aec96620a0a84324fd691bce2365a4e95}{Sensor\+Vibracion}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaGestion_8h_source_l00130}{Lista\+Gestion\+::mostrar\+Todos()}}.
+
+Gráfico de llamadas a esta función\+:
+% FIG 4
+\Hypertarget{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4}\index{SensorBase@{SensorBase}!procesarLectura@{procesarLectura}}
+\index{procesarLectura@{procesarLectura}!SensorBase@{SensorBase}}
+\doxyparagraph{\texorpdfstring{procesarLectura()}{procesarLectura()}}
+{\footnotesize\ttfamily \label{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4} 
+virtual void Sensor\+Base\+::procesar\+Lectura (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Procesa una lectura del sensor (método virtual puro) 
+
+
+
+Implementado en \mbox{\hyperlink{classSensorPresion_aff696aceb5e619529f911311a35d3c76}{Sensor\+Presion}}, \mbox{\hyperlink{classSensorTemperatura_a36227dc500c6f8be7866cb0f396894b3}{Sensor\+Temperatura}} y \mbox{\hyperlink{classSensorVibracion_aef0087510086befa37db18697382656a}{Sensor\+Vibracion}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaGestion_8h_source_l00111}{Lista\+Gestion\+::procesar\+Todos\+Sensores()}}.
+
+Gráfico de llamadas a esta función\+:
+% FIG 5
+
+
+\label{doc-variable-members}
+\Hypertarget{classSensorBase_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}\index{SensorBase@{SensorBase}!id@{id}}
+\index{id@{id}!SensorBase@{SensorBase}}
+\doxyparagraph{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57} 
+char\texorpdfstring{$\ast$}{*} Sensor\+Base\+::id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Identificador único del sensor. 
+
+
+
+Definición en la línea \mbox{\hyperlink{SensorBase_8h_source_l00023}{23}} del archivo \mbox{\hyperlink{SensorBase_8h_source}{Sensor\+Base.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SensorBase_8h_source_l00062}{get\+Id()}}, \mbox{\hyperlink{SensorPresion_8h_source_l00031}{Sensor\+Presion\+::\+Sensor\+Presion()}}, \mbox{\hyperlink{SensorTemperatura_8h_source_l00031}{Sensor\+Temperatura\+::\+Sensor\+Temperatura()}}, \mbox{\hyperlink{SensorVibracion_8h_source_l00031}{Sensor\+Vibracion\+::\+Sensor\+Vibracion()}} y \mbox{\hyperlink{SensorBase_8h_source_l00043}{\texorpdfstring{$\sim$}{\string~}\+Sensor\+Base()}}.
+
+\Hypertarget{classSensorBase_a924bf2aa62fdcbe9b8df1adaaae98ed6}\index{SensorBase@{SensorBase}!ubicacion@{ubicacion}}
+\index{ubicacion@{ubicacion}!SensorBase@{SensorBase}}
+\doxyparagraph{\texorpdfstring{ubicacion}{ubicacion}}
+{\footnotesize\ttfamily \label{classSensorBase_a924bf2aa62fdcbe9b8df1adaaae98ed6} 
+char\texorpdfstring{$\ast$}{*} Sensor\+Base\+::ubicacion\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Ubicación física del sensor. 
+
+
+
+Definición en la línea \mbox{\hyperlink{SensorBase_8h_source_l00024}{24}} del archivo \mbox{\hyperlink{SensorBase_8h_source}{Sensor\+Base.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SensorBase_8h_source_l00068}{get\+Ubicacion()}}, \mbox{\hyperlink{SensorPresion_8h_source_l00068}{Sensor\+Presion\+::imprimir\+Info()}}, \mbox{\hyperlink{SensorTemperatura_8h_source_l00068}{Sensor\+Temperatura\+::imprimir\+Info()}}, \mbox{\hyperlink{SensorVibracion_8h_source_l00068}{Sensor\+Vibracion\+::imprimir\+Info()}} y \mbox{\hyperlink{SensorBase_8h_source_l00043}{\texorpdfstring{$\sim$}{\string~}\+Sensor\+Base()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/charly/\+Documentos/\+Programacion Estructurada/sistema-\/sensores-\/iot/include/\mbox{\hyperlink{SensorBase_8h}{Sensor\+Base.\+h}}\end{DoxyCompactItemize}

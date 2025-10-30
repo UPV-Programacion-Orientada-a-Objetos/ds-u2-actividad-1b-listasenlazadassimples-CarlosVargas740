@@ -1,0 +1,77 @@
+\doxysubsection{Sensor\+Base.\+h}
+\hypertarget{SensorBase_8h_source}{}\label{SensorBase_8h_source}\index{/home/charly/Documentos/Programacion Estructurada/sistema-\/sensores-\/iot/include/SensorBase.h@{/home/charly/Documentos/Programacion Estructurada/sistema-\/sensores-\/iot/include/SensorBase.h}}
+\mbox{\hyperlink{SensorBase_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ SensorBase.h}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00003}00003\ \textcolor{comment}{\ *\ @brief\ Clase\ base\ abstracta\ para\ todos\ los\ sensores}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @author\ Carlos\ Vargas}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00005}00005\ \textcolor{comment}{\ *\ @date\ 30\ de\ octubre\ de\ 2025}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ SENSOR\_BASE\_H}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ SENSOR\_BASE\_H}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00013}00013\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00014}00014\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00015}00015\ \textcolor{comment}{\ *\ @class\ SensorBase}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00016}00016\ \textcolor{comment}{\ *\ @brief\ Clase\ abstracta\ que\ define\ la\ interfaz\ para\ todos\ los\ sensores}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00017}00017\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00018}00018\ \textcolor{comment}{\ *\ Esta\ clase\ utiliza\ polimorfismo\ para\ permitir\ procesamiento\ uniforme}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00019}00019\ \textcolor{comment}{\ *\ de\ diferentes\ tipos\ de\ sensores\ a\ través\ de\ métodos\ virtuales\ puros.}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00020}00020\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00021}\mbox{\hyperlink{classSensorBase}{00021}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSensorBase_abb141b649d4b3ab753ee9be122e60d49}{SensorBase}}\ \{}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00022}00022\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00023}\mbox{\hyperlink{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}{00023}}\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}{id}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{///<\ Identificador\ único\ del\ sensor}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00024}\mbox{\hyperlink{classSensorBase_a924bf2aa62fdcbe9b8df1adaaae98ed6}{00024}}\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classSensorBase_a924bf2aa62fdcbe9b8df1adaaae98ed6}{ubicacion}};\ \ \ \ \textcolor{comment}{///<\ Ubicación\ física\ del\ sensor}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00025}00025\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00026}00026\ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00027}00027\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00028}00028\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Constructor\ parametrizado}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00029}00029\ \textcolor{comment}{\ \ \ \ \ *\ @param\ id\ Identificador\ del\ sensor}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00030}00030\ \textcolor{comment}{\ \ \ \ \ *\ @param\ ubi\ Ubicación\ del\ sensor}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00031}00031\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00032}\mbox{\hyperlink{classSensorBase_abb141b649d4b3ab753ee9be122e60d49}{00032}}\ \ \ \ \ \mbox{\hyperlink{classSensorBase_abb141b649d4b3ab753ee9be122e60d49}{SensorBase}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ ubi)\ \{}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{char}[strlen(\textcolor{keywordtype}{id})\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ strcpy(this-\/>\textcolor{keywordtype}{id},\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00036}00036\ \ \ \ \ \ \ \ \ this-\/>ubicacion\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{char}[strlen(ubi)\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ strcpy(this-\/>ubicacion,\ ubi);}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00039}00039\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00040}00040\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00041}00041\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Destructor\ virtual\ (crítico\ para\ polimorfismo)}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00042}00042\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00043}\mbox{\hyperlink{classSensorBase_acb58cfa69a0635dc3ef5ccb1590dc261}{00043}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSensorBase_acb58cfa69a0635dc3ef5ccb1590dc261}{\string~SensorBase}}()\ \{}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}{id}};}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classSensorBase_a924bf2aa62fdcbe9b8df1adaaae98ed6}{ubicacion}};}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00047}00047\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00048}00048\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00049}00049\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Procesa\ una\ lectura\ del\ sensor\ (método\ virtual\ puro)}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00050}00050\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00051}\mbox{\hyperlink{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4}{00051}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4}{procesarLectura}}()\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00052}00052\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00053}00053\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Imprime\ información\ del\ sensor\ (método\ virtual\ puro)}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00056}\mbox{\hyperlink{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec}{00056}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec}{imprimirInfo}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00057}00057\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00058}00058\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00059}00059\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Obtiene\ el\ ID\ del\ sensor}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00060}00060\ \textcolor{comment}{\ \ \ \ \ *\ @return\ Puntero\ al\ identificador}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00062}\mbox{\hyperlink{classSensorBase_afcf1ece5fa3b4ffef2c74b65c90f1a8f}{00062}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classSensorBase_afcf1ece5fa3b4ffef2c74b65c90f1a8f}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classSensorBase_af03b1d45edd577d70d9a21f1cf1a7c57}{id}};\ \}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00063}00063\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00064}00064\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Obtiene\ la\ ubicación\ del\ sensor}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ *\ @return\ Puntero\ a\ la\ ubicación}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00068}\mbox{\hyperlink{classSensorBase_a0a693d0d29152d880cc799a08bc5b535}{00068}}\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classSensorBase_a0a693d0d29152d880cc799a08bc5b535}{getUbicacion}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classSensorBase_a924bf2aa62fdcbe9b8df1adaaae98ed6}{ubicacion}};\ \}}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00069}00069\ \};}
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{SensorBase_8h_source_l00071}00071\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

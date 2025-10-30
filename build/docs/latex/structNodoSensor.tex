@@ -1,0 +1,108 @@
+\doxysubsection{Referencia de la estructura Nodo\+Sensor}
+\hypertarget{structNodoSensor}{}\label{structNodoSensor}\index{NodoSensor@{NodoSensor}}
+
+
+\doxylink{structNodo}{Nodo} que almacena punteros a sensores (polimórfico)  
+
+
+
+
+{\ttfamily \#include $<$Lista\+Gestion.\+h$>$}
+
+
+
+Diagrama de colaboración de Nodo\+Sensor\+:
+% FIG 0
+\doxysubsubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNodoSensor_ace2beaa5ec92d0563c1ec75eb9b2657b}{Nodo\+Sensor}} (\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structNodoSensor_ae0b68b437f590a4ba1a8c5996a41332d}{sensor}}
+\begin{DoxyCompactList}\small\item\em Puntero polimórfico a sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodoSensor}{Nodo\+Sensor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structNodoSensor_a2f74bd43191c5e37a31ab288737ac40d}{siguiente}}
+\begin{DoxyCompactList}\small\item\em Siguiente nodo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Descripción detallada}
+\doxylink{structNodo}{Nodo} que almacena punteros a sensores (polimórfico) 
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00018}{18}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{structNodoSensor_doc-constructors}
+\doxysubsubsection{Documentación de constructores y destructores}
+\Hypertarget{structNodoSensor_ace2beaa5ec92d0563c1ec75eb9b2657b}\index{NodoSensor@{NodoSensor}!NodoSensor@{NodoSensor}}
+\index{NodoSensor@{NodoSensor}!NodoSensor@{NodoSensor}}
+\doxyparagraph{\texorpdfstring{NodoSensor()}{NodoSensor()}}
+{\footnotesize\ttfamily \label{structNodoSensor_ace2beaa5ec92d0563c1ec75eb9b2657b} 
+Nodo\+Sensor\+::\+Nodo\+Sensor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSensorBase}{Sensor\+Base}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em s} & Puntero al sensor \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00026}{26}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Hace referencia a \mbox{\hyperlink{ListaGestion_8h_source_l00019}{sensor}} y \mbox{\hyperlink{ListaGestion_8h_source_l00020}{siguiente}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{structNodoSensor_doc-variable-members}
+\doxysubsubsection{Documentación de datos miembro}
+\Hypertarget{structNodoSensor_ae0b68b437f590a4ba1a8c5996a41332d}\index{NodoSensor@{NodoSensor}!sensor@{sensor}}
+\index{sensor@{sensor}!NodoSensor@{NodoSensor}}
+\doxyparagraph{\texorpdfstring{sensor}{sensor}}
+{\footnotesize\ttfamily \label{structNodoSensor_ae0b68b437f590a4ba1a8c5996a41332d} 
+\mbox{\hyperlink{classSensorBase}{Sensor\+Base}}\texorpdfstring{$\ast$}{*} Nodo\+Sensor\+::sensor}
+
+
+
+Puntero polimórfico a sensor. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00019}{19}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaGestion_8h_source_l00094}{Lista\+Gestion\+::buscar\+Por\+Id()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00044}{Lista\+Gestion\+::liberar()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00130}{Lista\+Gestion\+::mostrar\+Todos()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00026}{Nodo\+Sensor()}} y \mbox{\hyperlink{ListaGestion_8h_source_l00111}{Lista\+Gestion\+::procesar\+Todos\+Sensores()}}.
+
+\Hypertarget{structNodoSensor_a2f74bd43191c5e37a31ab288737ac40d}\index{NodoSensor@{NodoSensor}!siguiente@{siguiente}}
+\index{siguiente@{siguiente}!NodoSensor@{NodoSensor}}
+\doxyparagraph{\texorpdfstring{siguiente}{siguiente}}
+{\footnotesize\ttfamily \label{structNodoSensor_a2f74bd43191c5e37a31ab288737ac40d} 
+\mbox{\hyperlink{structNodoSensor}{Nodo\+Sensor}}\texorpdfstring{$\ast$}{*} Nodo\+Sensor\+::siguiente}
+
+
+
+Siguiente nodo. 
+
+
+
+Definición en la línea \mbox{\hyperlink{ListaGestion_8h_source_l00020}{20}} del archivo \mbox{\hyperlink{ListaGestion_8h_source}{Lista\+Gestion.\+h}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ListaGestion_8h_source_l00073}{Lista\+Gestion\+::agregar\+Sensor()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00094}{Lista\+Gestion\+::buscar\+Por\+Id()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00044}{Lista\+Gestion\+::liberar()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00130}{Lista\+Gestion\+::mostrar\+Todos()}}, \mbox{\hyperlink{ListaGestion_8h_source_l00026}{Nodo\+Sensor()}} y \mbox{\hyperlink{ListaGestion_8h_source_l00111}{Lista\+Gestion\+::procesar\+Todos\+Sensores()}}.
+
+
+
+La documentación de esta estructura está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/charly/\+Documentos/\+Programacion Estructurada/sistema-\/sensores-\/iot/include/\mbox{\hyperlink{ListaGestion_8h}{Lista\+Gestion.\+h}}\end{DoxyCompactItemize}

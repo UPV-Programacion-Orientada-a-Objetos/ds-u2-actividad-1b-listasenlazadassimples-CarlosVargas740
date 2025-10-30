@@ -1,0 +1,119 @@
+\doxysubsection{Simulador\+Serial.\+h}
+\hypertarget{SimuladorSerial_8h_source}{}\label{SimuladorSerial_8h_source}\index{/home/charly/Documentos/Programacion Estructurada/sistema-\/sensores-\/iot/include/SimuladorSerial.h@{/home/charly/Documentos/Programacion Estructurada/sistema-\/sensores-\/iot/include/SimuladorSerial.h}}
+\mbox{\hyperlink{SimuladorSerial_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ SimuladorSerial.h}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00003}00003\ \textcolor{comment}{\ *\ @brief\ Simulador\ de\ comunicación\ serial\ Arduino}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @author\ Carlos\ Vargas}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00005}00005\ \textcolor{comment}{\ *\ @date\ 30\ de\ octubre\ de\ 2025}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ SIMULADOR\_SERIAL\_H}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ SIMULADOR\_SERIAL\_H}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00015}00015\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00016}00016\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00017}00017\ \textcolor{comment}{\ *\ @class\ SimuladorSerial}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00018}00018\ \textcolor{comment}{\ *\ @brief\ Simula\ datos\ recibidos\ por\ puerto\ serial\ desde\ Arduino}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00019}00019\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00020}00020\ \textcolor{comment}{\ *\ Genera\ datos\ aleatorios\ en\ formato\ "{}TIPO:ID:VALOR"{}\ simulando}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00021}00021\ \textcolor{comment}{\ *\ el\ comportamiento\ del\ sketch\ Arduino.}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00022}00022\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00023}\mbox{\hyperlink{classSimuladorSerial}{00023}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSimuladorSerial_a9c7271e2974dc73f16161cb5d7d97184}{SimuladorSerial}}\ \{}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00024}00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00025}\mbox{\hyperlink{classSimuladorSerial_a6a8f006e350ab125ea1aeedaaba5bdbf}{00025}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSimuladorSerial_a6a8f006e350ab125ea1aeedaaba5bdbf}{inicializado}};\ \ \textcolor{comment}{///<\ Estado\ de\ inicialización}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00026}00026\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00027}00027\ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00028}00028\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00029}00029\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Constructor}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00030}00030\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00031}\mbox{\hyperlink{classSimuladorSerial_a9c7271e2974dc73f16161cb5d7d97184}{00031}}\ \ \ \ \ \mbox{\hyperlink{classSimuladorSerial_a9c7271e2974dc73f16161cb5d7d97184}{SimuladorSerial}}()\ :\ \mbox{\hyperlink{classSimuladorSerial_a6a8f006e350ab125ea1aeedaaba5bdbf}{inicializado}}(false)\ \{\}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00032}00032\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00033}00033\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00034}00034\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Inicializa\ el\ generador\ de\ números\ aleatorios}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00035}00035\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00036}\mbox{\hyperlink{classSimuladorSerial_ac5d73a4b41461486d4252489dea19cd5}{00036}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimuladorSerial_ac5d73a4b41461486d4252489dea19cd5}{inicializar}}()\ \{}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classSimuladorSerial_a6a8f006e350ab125ea1aeedaaba5bdbf}{inicializado}})\ \{}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ srand(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(time(\textcolor{keyword}{nullptr})));}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSimuladorSerial_a6a8f006e350ab125ea1aeedaaba5bdbf}{inicializado}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00042}00042\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00043}00043\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00044}00044\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Genera\ una\ lectura\ de\ temperatura}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ *\ @param\ buffer\ Buffer\ donde\ escribir\ el\ dato}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00046}00046\ \textcolor{comment}{\ \ \ \ \ *\ @param\ tam\ Tamaño\ del\ buffer}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00047}00047\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00048}\mbox{\hyperlink{classSimuladorSerial_aae93a0edc4705df1aed3898553e75c57}{00048}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimuladorSerial_aae93a0edc4705df1aed3898553e75c57}{generarTemperatura}}(\textcolor{keywordtype}{char}*\ buffer,\ \textcolor{keywordtype}{int}\ tam)\ \{}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ temp\ =\ 20.0f\ +\ (rand()\ \%\ 100)\ /\ 10.0f;}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00050}00050\ \ \ \ \ \ \ \ \ snprintf(buffer,\ tam,\ \textcolor{stringliteral}{"{}TEMP:T-\/001:\%.1f"{}},\ temp);}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00052}00052\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00053}00053\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00054}00054\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Genera\ una\ lectura\ de\ presión}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00055}00055\ \textcolor{comment}{\ \ \ \ \ *\ @param\ buffer\ Buffer\ donde\ escribir\ el\ dato}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00056}00056\ \textcolor{comment}{\ \ \ \ \ *\ @param\ tam\ Tamaño\ del\ buffer}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00057}00057\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00058}\mbox{\hyperlink{classSimuladorSerial_a5415b9a9acb74f134817179dc1cab79e}{00058}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimuladorSerial_a5415b9a9acb74f134817179dc1cab79e}{generarPresion}}(\textcolor{keywordtype}{char}*\ buffer,\ \textcolor{keywordtype}{int}\ tam)\ \{}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ presion\ =\ 1000\ +\ (rand()\ \%\ 50);}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ snprintf(buffer,\ tam,\ \textcolor{stringliteral}{"{}PRES:P-\/105:\%d"{}},\ presion);}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00062}00062\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00063}00063\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Genera\ una\ lectura\ de\ vibración}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ *\ @param\ buffer\ Buffer\ donde\ escribir\ el\ dato}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00066}00066\ \textcolor{comment}{\ \ \ \ \ *\ @param\ tam\ Tamaño\ del\ buffer}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00067}00067\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00068}\mbox{\hyperlink{classSimuladorSerial_aa8653674f594ec3bae95292a3e6c377a}{00068}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimuladorSerial_aa8653674f594ec3bae95292a3e6c377a}{generarVibracion}}(\textcolor{keywordtype}{char}*\ buffer,\ \textcolor{keywordtype}{int}\ tam)\ \{}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vibracion\ =\ rand()\ \%\ 80;}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00070}00070\ \ \ \ \ \ \ \ \ snprintf(buffer,\ tam,\ \textcolor{stringliteral}{"{}VIBR:V-\/201:\%d"{}},\ vibracion);}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00072}00072\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00073}00073\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00074}00074\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Genera\ una\ lectura\ aleatoria\ de\ cualquier\ tipo}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00075}00075\ \textcolor{comment}{\ \ \ \ \ *\ @param\ buffer\ Buffer\ donde\ escribir\ el\ dato}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00076}00076\ \textcolor{comment}{\ \ \ \ \ *\ @param\ tam\ Tamaño\ del\ buffer}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00077}00077\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00078}\mbox{\hyperlink{classSimuladorSerial_a67d5828c81bf751194bb6cbcacc85aef}{00078}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimuladorSerial_a67d5828c81bf751194bb6cbcacc85aef}{generarLecturaAleatoria}}(\textcolor{keywordtype}{char}*\ buffer,\ \textcolor{keywordtype}{int}\ tam)\ \{}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tipo\ =\ rand()\ \%\ 3;}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (tipo)\ \{}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSimuladorSerial_aae93a0edc4705df1aed3898553e75c57}{generarTemperatura}}(buffer,\ tam);}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSimuladorSerial_a5415b9a9acb74f134817179dc1cab79e}{generarPresion}}(buffer,\ tam);}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSimuladorSerial_aa8653674f594ec3bae95292a3e6c377a}{generarVibracion}}(buffer,\ tam);}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00093}00093\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00094}00094\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00095}00095\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Simula\ recepción\ de\ datos\ del\ Arduino}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00096}00096\ \textcolor{comment}{\ \ \ \ \ *\ @param\ buffer\ Buffer\ donde\ se\ escribirán\ los\ datos}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00097}00097\ \textcolor{comment}{\ \ \ \ \ *\ @param\ tam\ Tamaño\ del\ buffer}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00098}00098\ \textcolor{comment}{\ \ \ \ \ *\ @param\ numLecturas\ Número\ de\ lecturas\ a\ generar}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00099}00099\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00100}\mbox{\hyperlink{classSimuladorSerial_ac6d14ff9a9fe3aa74f5f042167220b64}{00100}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimuladorSerial_ac6d14ff9a9fe3aa74f5f042167220b64}{simularRecepcion}}(\textcolor{keywordtype}{char}*\ buffer,\ \textcolor{keywordtype}{int}\ tam,\ \textcolor{keywordtype}{int}\ numLecturas\ =\ 5)\ \{}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00101}00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSimuladorSerial_ac5d73a4b41461486d4252489dea19cd5}{inicializar}}();}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00102}00102\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00103}00103\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n===\ Simulando\ Arduino\ ==="{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00104}00104\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Generando\ "{}}\ <<\ numLecturas\ <<\ \textcolor{stringliteral}{"{}\ lecturas..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00105}00105\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numLecturas;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSimuladorSerial_a67d5828c81bf751194bb6cbcacc85aef}{generarLecturaAleatoria}}(buffer,\ tam);}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ "{}}\ <<\ buffer\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00109}00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00110}00110\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00111}00111\ \};}
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{SimuladorSerial_8h_source_l00113}00113\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

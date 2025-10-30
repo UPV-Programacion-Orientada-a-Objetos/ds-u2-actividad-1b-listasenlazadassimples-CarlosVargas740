@@ -1,0 +1,193 @@
+\doxysubsection{Lista\+Sensor.\+h}
+\hypertarget{ListaSensor_8h_source}{}\label{ListaSensor_8h_source}\index{/home/charly/Documentos/Programacion Estructurada/sistema-\/sensores-\/iot/include/ListaSensor.h@{/home/charly/Documentos/Programacion Estructurada/sistema-\/sensores-\/iot/include/ListaSensor.h}}
+\mbox{\hyperlink{ListaSensor_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00001}00001\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00002}00002\ \textcolor{comment}{\ *\ @file\ ListaSensor.h}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00003}00003\ \textcolor{comment}{\ *\ @brief\ Lista\ enlazada\ genérica\ para\ almacenar\ lecturas\ de\ sensores}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00004}00004\ \textcolor{comment}{\ *\ @author\ Carlos\ Vargas}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00005}00005\ \textcolor{comment}{\ *\ @date\ 30\ de\ octubre\ de\ 2025}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ LISTA\_SENSOR\_H}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ LISTA\_SENSOR\_H}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00012}00012\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00013}00013\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00014}00014\ \textcolor{comment}{\ *\ @struct\ Nodo}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00015}00015\ \textcolor{comment}{\ *\ @brief\ Nodo\ de\ lista\ enlazada\ genérico}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00016}00016\ \textcolor{comment}{\ *\ @tparam\ T\ Tipo\ de\ dato\ a\ almacenar}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00017}00017\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00018}00018\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00019}\mbox{\hyperlink{structNodo}{00019}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structNodo_a96da8b61d6884126bb04fced32542df9}{Nodo}}\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00020}\mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{00020}}\ \ \ \ \ T\ \mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{///<\ Dato\ almacenado}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00021}\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{00021}}\ \ \ \ \ \mbox{\hyperlink{structNodo_a96da8b61d6884126bb04fced32542df9}{Nodo}}*\ \mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}};\ \textcolor{comment}{///<\ Puntero\ al\ siguiente\ nodo}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00022}00022\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00023}00023\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00024}00024\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Constructor}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00025}00025\ \textcolor{comment}{\ \ \ \ \ *\ @param\ valor\ Valor\ a\ almacenar}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00026}00026\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00027}\mbox{\hyperlink{structNodo_a96da8b61d6884126bb04fced32542df9}{00027}}\ \ \ \ \ \mbox{\hyperlink{structNodo_a96da8b61d6884126bb04fced32542df9}{Nodo}}(T\ valor)\ :\ \mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}}(valor),\ \mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}}(nullptr)\ \{\}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00028}00028\ \};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00029}00029\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00030}00030\ \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00031}00031\ \textcolor{comment}{\ *\ @class\ ListaSensor}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00032}00032\ \textcolor{comment}{\ *\ @brief\ Lista\ enlazada\ genérica\ con\ gestión\ manual\ de\ memoria}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00033}00033\ \textcolor{comment}{\ *\ @tparam\ T\ Tipo\ de\ dato\ a\ almacenar\ (int,\ float,\ etc.)}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00034}00034\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00035}00035\ \textcolor{comment}{\ *\ Implementa\ la\ Regla\ de\ Tres\ (constructor\ copia,\ operador=,\ destructor)}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00036}00036\ \textcolor{comment}{\ *\ para\ gestión\ correcta\ de\ memoria\ dinámica.}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00037}00037\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00038}00038\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00039}\mbox{\hyperlink{classListaSensor}{00039}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{ListaSensor}}\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00040}00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00041}\mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{00041}}\ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}};\ \ \textcolor{comment}{///<\ Puntero\ al\ primer\ nodo}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00042}\mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{00042}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}};\ \ \ \ \ \textcolor{comment}{///<\ Número\ de\ elementos}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00043}00043\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00044}00044\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00045}00045\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Libera\ toda\ la\ memoria\ de\ la\ lista}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00046}00046\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00047}\mbox{\hyperlink{classListaSensor_ad7832831f2089f21a189cdc7b9fea56e}{00047}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaSensor_ad7832831f2089f21a189cdc7b9fea56e}{liberar}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ actual\ =\ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actual\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ temp\ =\ actual;}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ actual\ =\ actual-\/>\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00054}00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00057}00057\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00058}00058\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00059}00059\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Copia\ profunda\ de\ otra\ lista}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00060}00060\ \textcolor{comment}{\ \ \ \ \ *\ @param\ otra\ Lista\ a\ copiar}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00061}00061\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00062}\mbox{\hyperlink{classListaSensor_abeca79d0410015b3d935876328c269e3}{00062}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaSensor_abeca79d0410015b3d935876328c269e3}{copiar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{ListaSensor}}\&\ otra)\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (otra.\mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structNodo}{Nodo<T>}}(otra.\mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}-\/>dato);}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00070}00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ actualOtra\ =\ otra.\mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}-\/>siguiente;}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00071}00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ actualEsta\ =\ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actualOtra\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ actualEsta-\/>\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structNodo}{Nodo<T>}}(actualOtra-\/>\mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}});}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ actualEsta\ =\ actualEsta-\/>\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ actualOtra\ =\ actualOtra-\/>\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00078}00078\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}}\ =\ otra.\mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00081}00081\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00082}00082\ \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00083}00083\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00084}00084\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Constructor\ por\ defecto}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00085}00085\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00086}\mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{00086}}\ \ \ \ \ \mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{ListaSensor}}()\ :\ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}(nullptr),\ \mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}}(0)\ \{\}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00087}00087\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00088}00088\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00089}00089\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Destructor}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00090}00090\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00091}\mbox{\hyperlink{classListaSensor_a1f0e57e514a2624a2473795bbd8fec8d}{00091}}\ \ \ \ \ \mbox{\hyperlink{classListaSensor_a1f0e57e514a2624a2473795bbd8fec8d}{\string~ListaSensor}}()\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00092}00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_ad7832831f2089f21a189cdc7b9fea56e}{liberar}}();}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00094}00094\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00095}00095\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00096}00096\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Constructor\ de\ copia\ (Regla\ de\ Tres)}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00097}00097\ \textcolor{comment}{\ \ \ \ \ *\ @param\ otra\ Lista\ a\ copiar}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00098}00098\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00099}\mbox{\hyperlink{classListaSensor_a81b2253c4b18038c2b9f823d5e244227}{00099}}\ \ \ \ \ \mbox{\hyperlink{classListaSensor_a81b2253c4b18038c2b9f823d5e244227}{ListaSensor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{ListaSensor}}\&\ otra)\ :\ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}(nullptr),\ \mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}}(0)\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00100}00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_abeca79d0410015b3d935876328c269e3}{copiar}}(otra);}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00102}00102\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00103}00103\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00104}00104\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Operador\ de\ asignación\ (Regla\ de\ Tres)}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00105}00105\ \textcolor{comment}{\ \ \ \ \ *\ @param\ otra\ Lista\ a\ asignar}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00106}00106\ \textcolor{comment}{\ \ \ \ \ *\ @return\ Referencia\ a\ esta\ lista}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00107}00107\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00108}\mbox{\hyperlink{classListaSensor_acd2b457d8d9fc55aeb832fd01c00f5a4}{00108}}\ \ \ \ \ \mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{ListaSensor}}\&\ \mbox{\hyperlink{classListaSensor_acd2b457d8d9fc55aeb832fd01c00f5a4}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{ListaSensor}}\&\ otra)\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&otra)\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_ad7832831f2089f21a189cdc7b9fea56e}{liberar}}();}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_abeca79d0410015b3d935876328c269e3}{copiar}}(otra);}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00112}00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00114}00114\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00115}00115\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00116}00116\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00117}00117\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Agrega\ un\ elemento\ al\ final}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00118}00118\ \textcolor{comment}{\ \ \ \ \ *\ @param\ valor\ Valor\ a\ agregar}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00119}00119\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00120}\mbox{\hyperlink{classListaSensor_a8a27091eef3e7fad01bc9e887b212581}{00120}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaSensor_a8a27091eef3e7fad01bc9e887b212581}{agregar}}(T\ valor)\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00121}00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ nuevo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structNodo}{Nodo<T>}}(valor);}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00122}00122\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}\ =\ nuevo;}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00125}00125\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ actual\ =\ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actual-\/>\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}}\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ actual\ =\ actual-\/>\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ actual-\/>\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}}\ =\ nuevo;}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00131}00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00132}00132\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00133}00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}}++;}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00134}00134\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00135}00135\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00136}00136\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00137}00137\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Calcula\ el\ promedio\ de\ los\ valores}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00138}00138\ \textcolor{comment}{\ \ \ \ \ *\ @return\ Promedio\ (tipo\ T)}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00139}00139\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00140}\mbox{\hyperlink{classListaSensor_a9cd368481187ad8a4faf79db7810086b}{00140}}\ \ \ \ \ T\ \mbox{\hyperlink{classListaSensor_a9cd368481187ad8a4faf79db7810086b}{calcularPromedio}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}}\ ==\ 0)\ \textcolor{keywordflow}{return}\ T(0);}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00142}00142\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00143}00143\ \ \ \ \ \ \ \ \ T\ suma\ =\ T(0);}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00144}00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ actual\ =\ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00145}00145\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actual\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ suma\ =\ suma\ +\ actual-\/>\mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ actual\ =\ actual-\/>\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00149}00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00150}00150\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00151}00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ suma\ /\ \mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00152}00152\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00153}00153\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00154}00154\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00155}00155\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Obtiene\ el\ número\ de\ elementos}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00156}00156\ \textcolor{comment}{\ \ \ \ \ *\ @return\ Cantidad\ de\ elementos}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00157}00157\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00158}\mbox{\hyperlink{classListaSensor_a6635542f89115ce10f42a5531b84125b}{00158}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classListaSensor_a6635542f89115ce10f42a5531b84125b}{getCantidad}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classListaSensor_a5e7c69ba6f1a8749c0b81949cb6c343e}{cantidad}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00160}00160\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00161}00161\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00162}00162\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00163}00163\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Imprime\ todos\ los\ valores}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00164}00164\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00165}\mbox{\hyperlink{classListaSensor_a11f84bbbda6299d28a3018eefeeb5a02}{00165}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaSensor_a11f84bbbda6299d28a3018eefeeb5a02}{imprimir}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00166}00166\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ actual\ =\ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00167}00167\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (actual\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ actual-\/>\mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (actual-\/>\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}}\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ actual\ =\ actual-\/>\mbox{\hyperlink{structNodo_abd02c1be2b733934eb4842c9c5ae63fb}{siguiente}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00174}00174\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00175}00175\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00176}00176\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00177}00177\ \ \ \ \ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00178}00178\ \textcolor{comment}{\ \ \ \ /**}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00179}00179\ \textcolor{comment}{\ \ \ \ \ *\ @brief\ Verifica\ si\ la\ lista\ está\ vacía}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00180}00180\ \textcolor{comment}{\ \ \ \ \ *\ @return\ true\ si\ está\ vacía}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00181}00181\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00182}\mbox{\hyperlink{classListaSensor_a2dd75ef08cf9a41dc12886b45aa0571e}{00182}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classListaSensor_a2dd75ef08cf9a41dc12886b45aa0571e}{estaVacia}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00183}00183\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classListaSensor_a7e0c7cd9a3fd891df2989fc501b0d235}{cabeza}}\ ==\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00184}00184\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00185}00185\ \};}
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{ListaSensor_8h_source_l00187}00187\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
